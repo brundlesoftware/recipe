@@ -112,7 +112,7 @@
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && current) wake(true); });
 
   /* ---------- list ---------- */
-  let query = '', listScroll = 0, current = null;
+  let query = '', listScroll = 0, current = null, listLang = 'orig';
   const doneSteps = {}, langOf = {};
 
   /* The recipe as shown in `lang`: the original, or its translation laid over it.
@@ -133,7 +133,12 @@
     document.title = 'Recipes';
     document.documentElement.lang = 'en';
     app.innerHTML = `
-      <h1 class="h1">Recipes</h1>
+      <div class="top">
+        <h1 class="h1">Recipes</h1>
+        <div class="seg" role="group" aria-label="Language of titles">${[['orig', 'Original'], ['en', 'English']].map(([k, label]) => `
+          <button data-act="listlang" data-lang="${k}" aria-pressed="${listLang === k}" class="${listLang === k ? 'on' : ''}">${label}</button>`).join('')}
+        </div>
+      </div>
       <div class="sub num">${recipes.length} recipes</div>
       <label class="search">${icon('search')}<input id="q" type="search" placeholder="Find a recipe or ingredient" autocomplete="off" value="${esc(query)}"></label>
       <div id="list"></div>`;
@@ -150,7 +155,10 @@
     const hits = recipes.filter(r => !q || words(r).includes(q));
     if (!hits.length) { document.getElementById('list').innerHTML = '<div class="empty">No recipe matches.</div>'; return; }
     const groups = {};
-    hits.forEach(r => { const c = catOf[r.id] || 'Other'; (groups[c] = groups[c] || []).push(r); });
+    // In English mode titles come from the translation; each section re-sorts on the shown title.
+    hits.map(r => listLang === 'en' ? view(r, 'en') : r)
+      .sort((a, b) => a.title.localeCompare(b.title, a.lang === 'no' ? 'nb' : 'en', { sensitivity: 'base' }))
+      .forEach(r => { const c = catOf[r.id] || 'Other'; (groups[c] = groups[c] || []).push(r); });
     const order = CATS.map(c => c.name).concat('Other').filter(c => groups[c]);
     document.getElementById('list').innerHTML = order.map(L => `
       <div class="label">${esc(L)}</div>
@@ -173,7 +181,10 @@
     p = Math.max(step, Math.min(99, Math.round(p / step) * step));
     current = { r, p, step };
     store.set('p:' + r.id, p);
-    if (first) { doneSteps[r.id] = []; langOf[r.id] = r.lang; } // each open starts in the original language, no ticks
+    if (first) { // each open starts with no ticks, in the list's language choice
+      doneSteps[r.id] = [];
+      langOf[r.id] = listLang === 'en' && TRS[r.id] && TRS[r.id].lang === 'en' ? 'en' : r.lang;
+    }
     const v = view(r, langOf[r.id]);
     const f = p / base, t = tr(v);
     const done = doneSteps[r.id];
@@ -221,6 +232,9 @@
 
   app.addEventListener('click', e => {
     const b = e.target.closest('button');
+    if (b && b.dataset.act === 'listlang') { // Original / English on the main page; resets to Original on each launch
+      listLang = b.dataset.lang; listScroll = window.scrollY; renderList(); return;
+    }
     if (!b || !current) return;
     const act = b.dataset.act;
     if (act === 'inc') setPortions(Math.min(99, current.p + current.step));
@@ -238,6 +252,7 @@
   /* ---------- routing: #/  and  #/r/<id>[/<portions>] ---------- */
   function route() {
     const [kind, id, p, lang] = location.hash.replace(/^#\/?/, '').split('/');
+    if (kind === 'en') listLang = 'en'; // #/en opens the list in English (used for testing)
     if (kind === 'r' && byId[id]) {
       if (current && current.r !== byId[id]) current = null;
       renderRecipe(byId[id], parseFloat(p) || null);
