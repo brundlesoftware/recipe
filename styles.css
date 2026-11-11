@@ -56,14 +56,20 @@ svg.i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke
 .empty{color:var(--sds-text-2);text-align:center;padding:40px 0}
 
 /* ---------- recipe ---------- */
-.top{display:flex;align-items:flex-start;gap:14px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.title{margin-top:16px}
+/* Language switch: two-segment pill, chosen segment in brand */
+.seg{display:inline-flex;padding:3px;gap:2px;background:var(--sds-bg);border:1px solid var(--sds-border);border-radius:var(--sds-full)}
+.seg button{height:40px;padding:0 16px;border:0;border-radius:var(--sds-full);background:none;font-size:15px;font-weight:600;color:var(--sds-text-2);transition:transform .12s}
+.seg button:active{transform:scale(.95)}
+.seg button.on{background:var(--sds-brand);color:var(--sds-on-brand)}
 .round{
   width:48px;height:48px;border-radius:var(--sds-full);background:var(--sds-bg);border:1px solid var(--sds-border);
   display:grid;place-items:center;flex:none;box-shadow:var(--shadow-float);transition:transform .12s;padding:0;
 }
 .round:active{transform:scale(.95)}
 .round:disabled{color:var(--sds-text-3);transform:none}
-.top .h1{font-size:30px;padding-top:4px}
+.title.h1{font-size:30px}
 
 .stepper{
   position:sticky;top:calc(env(safe-area-inset-top) + 8px);z-index:5;margin-top:18px;

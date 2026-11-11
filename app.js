@@ -4,6 +4,7 @@
   const app = document.getElementById('app');
   const recipes = (window.RECIPES || []).filter(r => r && r.id && r.title && Array.isArray(r.ingredients) && Array.isArray(r.steps)).sort((a, b) => a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }));
   const byId = Object.fromEntries(recipes.map(r => [r.id, r]));
+  const TRS = window.RECIPE_TR || {};
   const CATS = window.CATEGORIES || [];
   const catOf = {};
   CATS.forEach(c => c.ids.forEach(id => { catOf[id] = c.name; }));
@@ -112,7 +113,21 @@
 
   /* ---------- list ---------- */
   let query = '', listScroll = 0, current = null;
-  const doneSteps = {};
+  const doneSteps = {}, langOf = {};
+
+  /* The recipe as shown in `lang`: the original, or its translation laid over it.
+     Amounts, units and ids always come from the original. */
+  function view(r, lang) {
+    const x = TRS[r.id];
+    if (!x || lang === r.lang || x.lang !== lang) return r;
+    const xi = x.ingredients || {};
+    return Object.assign({}, r, {
+      lang, title: x.title || r.title, time: x.time || r.time,
+      steps: x.steps && x.steps.length ? x.steps : r.steps,
+      ingredients: r.ingredients.map(i => xi[i.id]
+        ? Object.assign({}, i, { name: xi[i.id].name, pl: i.pl ? (xi[i.id].pl || xi[i.id].name) : undefined }) : i)
+    });
+  }
   function renderList() {
     current = null; wake(false);
     document.title = 'Recipes';
@@ -129,7 +144,10 @@
   }
   function fillList() {
     const q = query.trim().toLowerCase();
-    const hits = recipes.filter(r => !q || r.title.toLowerCase().includes(q) || r.ingredients.some(i => i.name.toLowerCase().includes(q)));
+    // Search matches both languages: "chicken" finds Kyllingfilet i form, "kylling" finds Marry me chicken.
+    const words = r => { const x = TRS[r.id] || {}; const xi = x.ingredients || {};
+      return [r.title, x.title || ''].concat(r.ingredients.map(i => i.name + ' ' + ((xi[i.id] || {}).name || ''))).join(' ').toLowerCase(); };
+    const hits = recipes.filter(r => !q || words(r).includes(q));
     if (!hits.length) { document.getElementById('list').innerHTML = '<div class="empty">No recipe matches.</div>'; return; }
     const groups = {};
     hits.forEach(r => { const c = catOf[r.id] || 'Other'; (groups[c] = groups[c] || []).push(r); });
@@ -155,16 +173,20 @@
     p = Math.max(step, Math.min(99, Math.round(p / step) * step));
     current = { r, p, step };
     store.set('p:' + r.id, p);
-    const f = p / base, t = tr(r);
-    if (first) doneSteps[r.id] = []; // ticks reset each time a recipe is opened
+    if (first) { doneSteps[r.id] = []; langOf[r.id] = r.lang; } // each open starts in the original language, no ticks
+    const v = view(r, langOf[r.id]);
+    const f = p / base, t = tr(v);
     const done = doneSteps[r.id];
-    document.title = r.title;
-    document.documentElement.lang = r.lang === 'no' ? 'nb' : 'en';
+    document.title = v.title;
+    document.documentElement.lang = v.lang === 'no' ? 'nb' : 'en';
     app.innerHTML = `
       <div class="top">
         <a class="round" href="#/" aria-label="${t.back}" style="color:inherit">${icon('back')}</a>
-        <h1 class="h1">${esc(r.title)}${r.sample ? '<span class="sample">Sample</span>' : ''}</h1>
+        ${TRS[r.id] ? `<div class="seg" role="group" aria-label="Language / Språk">${['no', 'en'].map(l => `
+          <button data-act="lang" data-lang="${l}" aria-pressed="${v.lang === l}" class="${v.lang === l ? 'on' : ''}">${l === 'no' ? 'Norsk' : 'English'}</button>`).join('')}
+        </div>` : ''}
       </div>
+      <h1 class="h1 title">${esc(v.title)}</h1>
       <div class="stepper" role="group" aria-label="${t.portions}">
         <div class="what">
           <span class="n num" aria-live="polite">${mult ? frac(p) + '×' : p}</span> <span class="w">${mult ? t.batch : p === 1 ? t.portion : t.portions}</span>
@@ -175,15 +197,15 @@
       </div>
 
       <div class="label">${t.ing}</div>
-      <ul class="panel ings">${r.ingredients.map(i => {
+      <ul class="panel ings">${v.ingredients.map(i => {
         const a = amount(i, f, t);
         return `<li><span class="q num">${esc(a.amt)}</span><span class="nm">${esc(ingName(i, a.n))}${i.from ? `<span class="tag">${t.from} ${esc(i.from)}</span>` : ''}</span></li>`;
       }).join('')}</ul>
 
       <div class="label">${t.steps}</div>
-      <ol class="steps">${r.steps.map((s, k) => `
+      <ol class="steps">${v.steps.map((s, k) => `
         <li><button class="step${done.includes(k) ? ' done' : ''}" data-step="${k}">
-          <span class="no num">${k + 1}</span><span>${stepHtml(s, r, f)}</span></button></li>`).join('')}</ol>
+          <span class="no num">${k + 1}</span><span>${stepHtml(s, v, f)}</span></button></li>`).join('')}</ol>
       <p class="hint">${t.hint}</p>
       ${r.source ? `<p class="source">${t.source}: <a href="${esc(r.source)}" rel="noopener" target="_blank">${esc(r.source)}</a></p>` : ''}`;
     if (first) window.scrollTo(0, 0);
@@ -204,6 +226,7 @@
     if (act === 'inc') setPortions(Math.min(99, current.p + current.step));
     else if (act === 'dec') setPortions(Math.max(current.step, current.p - current.step));
     else if (act === 'reset') setPortions(current.r.portions > 0 ? current.r.portions : 1);
+    else if (act === 'lang') { langOf[current.r.id] = b.dataset.lang; setPortions(current.p); }
     else if (b.dataset.step != null) {
       const k = +b.dataset.step, done = doneSteps[current.r.id];
       const i = done.indexOf(k);
@@ -214,8 +237,12 @@
 
   /* ---------- routing: #/  and  #/r/<id>[/<portions>] ---------- */
   function route() {
-    const [kind, id, p] = location.hash.replace(/^#\/?/, '').split('/');
-    if (kind === 'r' && byId[id]) renderRecipe(byId[id], parseFloat(p) || null);
+    const [kind, id, p, lang] = location.hash.replace(/^#\/?/, '').split('/');
+    if (kind === 'r' && byId[id]) {
+      if (current && current.r !== byId[id]) current = null;
+      renderRecipe(byId[id], parseFloat(p) || null);
+      if (lang && TRS[id] && langOf[id] !== lang) { langOf[id] = lang; setPortions(current.p); } // #/r/<id>/<p>/<en|no>
+    }
     else renderList();
   }
   window.addEventListener('hashchange', route);

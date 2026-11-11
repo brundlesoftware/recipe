@@ -697,3 +697,599 @@ window.RECIPES = [
     ]
   }
 ];
+/* Translations into the other language, by recipe id (data/tr/*.json). */
+window.RECIPE_TR = {
+"hveteboller": {
+    "lang": "en",
+    "title": "Wheat buns",
+    "time": "Over 60 min",
+    "ingredients": {
+      "smor": { "name": "butter" },
+      "hvetemel": { "name": "plain flour" },
+      "sukker": { "name": "sugar" },
+      "gjaer": { "name": "pack of fresh yeast", "pl": "packs of fresh yeast" },
+      "salt": { "name": "salt" },
+      "kardemomme": { "name": "ground cardamom" },
+      "melk": { "name": "milk" },
+      "rosiner": { "name": "raisins (optional)" },
+      "egg": { "name": "egg, beaten, for brushing", "pl": "eggs, beaten, for brushing" }
+    },
+    "steps": [
+      "Cut {smor} into cubes and let it soften a little while the dough is kneaded.",
+      "Put {hvetemel}, {sukker}, {gjaer}, {salt} and {kardemomme} in the bowl of a stand mixer. Fresh yeast can be crumbled into the bowl or stirred into the milk.",
+      "Add {melk} (cold or at room temperature). Hold back 50 ml and add more as you go if the dough seems too stiff.",
+      "Knead the dough with the dough hook for about 15 minutes. Add the butter and keep kneading for about 10 minutes, until the dough is soft and elastic.",
+      "Knead {rosiner} well into the dough.",
+      "Cover the dough and leave it to rise in a warm place until doubled in size, about 45-60 minutes.",
+      "Divide the dough into evenly sized pieces (about 24 buns) and roll them into rounds. Place the buns on a baking tray lined with baking paper and leave them to rise for 20-30 minutes.",
+      "Brush the buns with {egg} and bake in the middle of the oven at 225 °C for 6–10 minutes. Cool on a wire rack."
+    ]
+  },
+  "lasagne": {
+    "lang": "en",
+    "title": "Lasagne",
+    "time": "Over 60 min",
+    "ingredients": {
+      "lasagneplater": { "name": "lasagne sheet", "pl": "lasagne sheets" },
+      "hvitost-topp": { "name": "grated white cheese for the top" },
+      "bacon": { "name": "bacon or pancetta" },
+      "olje1": { "name": "neutral oil" },
+      "kjottdeig": { "name": "minced beef" },
+      "lok": { "name": "finely chopped onion", "pl": "finely chopped onions" },
+      "gulrot": { "name": "finely chopped carrot", "pl": "finely chopped carrots" },
+      "selleri": { "name": "stick finely chopped celery", "pl": "sticks finely chopped celery" },
+      "olje2": { "name": "neutral oil" },
+      "tomatpure": { "name": "tomato purée" },
+      "tomater": { "name": "can of tinned tomatoes (400 g)", "pl": "cans of tinned tomatoes (400 g each)" },
+      "kraft": { "name": "beef stock, bouillon or water (approx.)" },
+      "oregano": { "name": "dried oregano" },
+      "smor": { "name": "butter" },
+      "hvetemel": { "name": "plain flour" },
+      "melk": { "name": "milk" },
+      "parmesan": { "name": "grated parmesan or other white cheese" },
+      "salt": { "name": "salt" },
+      "pepper": { "name": "ground black pepper" },
+      "muskat": { "name": "grated nutmeg" }
+    },
+    "steps": [
+      "Cut {bacon} into small pieces. Put {olje1} in a hot pan and fry the bacon until golden. Add a little more oil and brown {kjottdeig} over a high heat in two batches.",
+      "Turn the heat down a little, add {lok}, {gulrot} and {selleri} and fry until the vegetables are soft and glossy. Return the bacon and mince to the pan and mix.",
+      "Make a well in the middle of the pan, add {olje2} and fry {tomatpure} for a few minutes. Add {tomater}, {kraft} and {oregano}. Let the meat sauce simmer for at least 10 minutes until it starts to thicken, or ideally with a lid on for about 1 ½ hours for extra flavour. Stir now and then and season with salt and pepper.",
+      "Melt {smor} in a saucepan and stir in {hvetemel}. Whisk in {melk} gradually and let the sauce boil for about 10 minutes, until fairly thick. Add {parmesan} and let the cheese melt. Season with {salt}, {pepper} and {muskat}.",
+      "Layer the meat sauce, {lasagneplater} and cheese sauce in an ovenproof dish. Finish with pasta sheets and cheese sauce and sprinkle {hvitost-topp} over the top.",
+      "Bake in the oven at 200 °C for 30-40 minutes. Check with a skewer or the tip of a knife that the pasta is tender. Let the lasagne rest for a few minutes before serving."
+    ]
+  },
+  "kyllingfilet-i-form": {
+    "lang": "en",
+    "title": "Baked chicken fillets",
+    "time": "20–40 min",
+    "ingredients": {
+      "kyllingfilet": { "name": "chicken fillet", "pl": "chicken fillets" },
+      "margarin": { "name": "margarine or oil for frying" },
+      "lok": { "name": "onion, roughly chopped", "pl": "onions, roughly chopped" },
+      "paprika": { "name": "red pepper, roughly chopped", "pl": "red peppers, roughly chopped" },
+      "flote": { "name": "double cream or cooking cream" },
+      "ketchup": { "name": "ketchup" },
+      "karri": { "name": "curry powder" },
+      "eddik": { "name": "vinegar, 7% (optional)" },
+      "byggryn": { "name": "dry pearl barley" },
+      "salat": { "name": "mixed baby salad leaves" }
+    },
+    "steps": [
+      "Brown {kyllingfilet} on both sides in a frying pan with {margarin}, 2-3 minutes per side. Season with salt and pepper. Place the fillets in an ovenproof dish together with {lok} and {paprika}.",
+      "Whisk together {flote}, {ketchup}, {karri} and {eddik}. Season with salt and pepper and pour the sauce over the dish.",
+      "Put the dish in the oven at 200 °C for about 20-25 minutes, until the chicken is cooked through.",
+      "Cook {byggryn} according to the packet instructions, about 20 minutes. Put {salat} in a serving bowl and serve with the chicken fillets in sauce."
+    ]
+  },
+  "risgrot": {
+    "lang": "en",
+    "title": "Rice porridge",
+    "time": "Over 60 min",
+    "ingredients": {
+      "gryn": { "name": "porridge rice" },
+      "vann": { "name": "water" },
+      "melk": { "name": "milk" },
+      "salt": { "name": "salt" }
+    },
+    "steps": [
+      "Bring {gryn} and {vann} to the boil in a pot and let it cook for 10 minutes over a medium heat until the water has almost boiled away.",
+      "Pour in {melk}, bring to the boil and turn the heat down. Let the porridge simmer on a low heat for about 1 hour, or until it is thick enough. Stir now and then so it doesn't catch on the bottom.",
+      "Season with {salt}."
+    ]
+  },
+  "eltefrie-grove-rundstykker": {
+    "lang": "en",
+    "title": "No-knead wholemeal rolls",
+    "time": "Over 60 min",
+    "ingredients": {
+      "hvetemel": { "name": "plain flour" },
+      "sammalt": { "name": "fine wholemeal wheat flour or wholemeal rye flour" },
+      "havregryn": { "name": "quick-cook rolled oats" },
+      "solsikke": { "name": "sunflower seeds" },
+      "sesam": { "name": "sesame seeds" },
+      "lin": { "name": "linseeds" },
+      "chia": { "name": "chia seeds" },
+      "gjaer": { "name": "dried yeast" },
+      "salt": { "name": "salt" },
+      "vann": { "name": "cold water" },
+      "margarin": { "name": "margarine for greasing the tin" }
+    },
+    "steps": [
+      "Mix {hvetemel}, {sammalt}, {havregryn}, {solsikke}, {sesam}, {lin}, {chia}, {gjaer} and {salt} in a bowl.",
+      "Pour in {vann} and quickly stir the dough together until everything is combined and it is a little sticky.",
+      "Cover the bowl and leave the dough to rise on the worktop overnight (10-12 hours).",
+      "Grease a muffin tin with {margarin}. Use an ice cream scoop or a couple of tablespoons to divide the dough into the tin.",
+      "Put the tin in the oven at 200 °C (fan) until the rolls are cooked through and nicely coloured, about 30 minutes."
+    ]
+  },
+  "wok-med-kylling-og-nudler": {
+    "lang": "en",
+    "title": "Chicken and noodle stir-fry",
+    "time": "Under 20 min",
+    "ingredients": {
+      "soyasaus": { "name": "soy sauce" },
+      "buljong": { "name": "beef stock (made up)" },
+      "maisenna": { "name": "cornflour" },
+      "chili": { "name": "chilli flakes" },
+      "ingefaer": { "name": "grated fresh ginger" },
+      "kylling": { "name": "chicken fillet" },
+      "hvitlok": { "name": "garlic clove", "pl": "garlic cloves" },
+      "lime": { "name": "lime (juice)", "pl": "limes (juice)" },
+      "rodlok": { "name": "red onion", "pl": "red onions" },
+      "squash": { "name": "green courgette", "pl": "green courgettes" },
+      "paprika": { "name": "green pepper", "pl": "green peppers" },
+      "brokkoli": { "name": "broccoli", "pl": "broccoli" },
+      "babymais": { "name": "pack of fresh baby corn", "pl": "packs of fresh baby corn" },
+      "nudler": { "name": "wholewheat noodles" },
+      "olje": { "name": "rapeseed oil for frying" },
+      "pepper": { "name": "freshly ground pepper" },
+      "koriander": { "name": "fresh coriander to garnish" }
+    },
+    "steps": [
+      "Make the stir-fry sauce from {soyasaus}, {buljong}, {maisenna} and {chili}. Grate {ingefaer} and mix everything well.",
+      "Pat {kylling} dry with kitchen paper and cut first into long strips, then into pieces of about 3 cm. Put the pieces in a bowl.",
+      "Grate or chop {hvitlok}. Mix the chicken pieces, garlic and {lime}. Marinate for about 30 minutes.",
+      "Cut {rodlok} into wedges, {paprika} into smaller pieces and {brokkoli} into small florets. Halve {squash} lengthways, then halve again, cut out the seeds and slice diagonally into smaller pieces. Cut {babymais} diagonally.",
+      "Cook {nudler} according to the packet instructions.",
+      "Stir-fry the chicken quickly (2-3 minutes) in {olje} over a high heat in a pan. Take the meat out. Stir-fry the onion, broccoli and courgette.",
+      "Finally stir in the fried chicken, pepper, baby corn and noodles. The noodles can also be served on the side.",
+      "Add the stir-fry sauce and bring to the boil. Season with {pepper}, lime juice and a little salt if needed. Top with {koriander} and chilli flakes."
+    ]
+  },
+  "helstekt-kylling-pa-gronnsakseng": {
+    "lang": "en",
+    "title": "Whole roast chicken on a bed of vegetables",
+    "time": "Over 60 min",
+    "ingredients": {
+      "kylling": { "name": "chicken (approx. 1.5 kg)", "pl": "chickens (approx. 1.5 kg each)" },
+      "smor": { "name": "butter" },
+      "sitron": { "name": "washed lemon, finely grated zest", "pl": "washed lemons, finely grated zest" },
+      "rosmarin": { "name": "chopped fresh rosemary" },
+      "salt1": { "name": "salt" },
+      "pepper1": { "name": "ground black pepper" },
+      "gulrot": { "name": "carrot", "pl": "carrots" },
+      "sellerirot": { "name": "celeriac", "pl": "celeriac" },
+      "fennikel": { "name": "fennel bulb", "pl": "fennel bulbs" },
+      "rodlok": { "name": "red onion", "pl": "red onions" },
+      "potet": { "name": "new potato, almond potato or amadine potato", "pl": "new potatoes, almond potatoes or amadine potatoes" },
+      "hvitlok": { "name": "garlic clove", "pl": "garlic cloves" },
+      "timian": { "name": "fresh thyme" },
+      "oliven": { "name": "black olives" },
+      "honning": { "name": "honey" },
+      "salt2": { "name": "salt (for the vegetables)" },
+      "pepper2": { "name": "ground black pepper (for the vegetables)" }
+    },
+    "steps": [
+      "Dry {kylling} well with kitchen paper. Tie the ends of the drumsticks together if that hasn't been done, for a more evenly cooked and neater chicken.",
+      "Melt {smor} and stir in {sitron}, {rosmarin}, {salt1} and {pepper1}. Brush the chicken with the mixture and place it in an ovenproof dish or roasting tin.",
+      "Roast the chicken in the oven at 180 °C for about 1 1/2 hours, until cooked through and golden. If you like, use a meat thermometer in the thickest part of the breast, without it touching the bone. The chicken is done when the thermometer reads 68 °C.",
+      "Peel {gulrot}, {sellerirot}, {fennikel}, {rodlok} and {potet} and cut into chunky pieces.",
+      "Mix the vegetables with {hvitlok}, {timian}, {oliven}, {honning}, {salt2} and {pepper2} in a bowl.",
+      "Roast the vegetables together with the chicken for the last 30 minutes of the cooking time.",
+      "Take the chicken out and let it rest for about 15 minutes before carving. Turn the oven up to 220 °C and roast the vegetables until they are tender and nicely coloured."
+    ]
+  },
+"brun-saus": {
+    "lang": "en",
+    "title": "Brown gravy",
+    "time": "20–40 min",
+    "ingredients": {
+      "smor": { "name": "butter" },
+      "hvetemel": { "name": "plain flour" },
+      "kraft": { "name": "meat stock or bouillon" },
+      "salt": { "name": "salt" },
+      "pepper": { "name": "pepper" }
+    },
+    "steps": [
+      "Melt and brown {smor}. Add {hvetemel} and brown over a low heat until the mixture turns a nutty brown colour.",
+      "Whisk in warm {kraft} a little at a time, stirring well after each addition.",
+      "Let the gravy simmer for about 10 minutes.",
+      "Season with {salt} and {pepper}."
+    ]
+  },
+  "ovnsstekte-potetbater": {
+    "lang": "en",
+    "title": "Oven-baked potato wedges",
+    "time": "20–40 min",
+    "ingredients": {
+      "potet": { "name": "potato (choose a firm, waxy variety)" },
+      "olje": { "name": "neutral oil" },
+      "urtekrydder": { "name": "mixed herbs" },
+      "salt": { "name": "salt" }
+    },
+    "steps": [
+      "Wash {potet} well and cut into wedges. Put them in a bowl and add {olje}.",
+      "Sprinkle over {salt}, {urtekrydder} and paprika. Mix well.",
+      "Tip the wedges onto a baking tray lined with baking paper.",
+      "Bake the potatoes at 225 °C for 20-30 minutes. Test with a sharp knife to check they are tender.",
+      "If you like, use the fan setting for the last 5 minutes for a crisp, golden crust."
+    ]
+  },
+  "laks-i-folie": {
+    "lang": "en",
+    "title": "Salmon in foil",
+    "time": "Under 20 min",
+    "ingredients": {
+      "basilikum": { "name": "1 handful of fresh basil" },
+      "kjorvel": { "name": "1 handful of fresh chervil" },
+      "persille": { "name": "1 handful of flat-leaf parsley" },
+      "laks": { "name": "salmon fillet" },
+      "olje": { "name": "neutral oil" },
+      "salt": { "name": "salt" },
+      "pepper": { "name": "pepper" },
+      "sitron": { "name": "lemon", "pl": "lemons" }
+    },
+    "steps": [
+      "Place 1 handful of fresh basil, 1 handful of fresh chervil and 1 handful of flat-leaf parsley on a sheet of aluminium foil.",
+      "Lay {laks} on top of the herbs.",
+      "Drizzle over {olje} and season with {salt} and {pepper}. Squeeze over a little lemon juice.",
+      "Fold the foil around the fish to make a tightly sealed parcel and put it on the grill for about 15-20 minutes.",
+      "Cut {sitron} in half and grill for a couple of minutes, cut side down.",
+      "Open the salmon parcels and garnish with a few lemon slices."
+    ]
+  },
+  "kjottsuppe": {
+    "lang": "en",
+    "title": "Meat soup",
+    "time": "Over 60 min",
+    "ingredients": {
+      "kjott": { "name": "boneless lamb, or boiling beef" },
+      "vann": { "name": "water" },
+      "purre": { "name": "leek, chopped", "pl": "leek, chopped" },
+      "lok": { "name": "onion, chopped", "pl": "onion, chopped" },
+      "gulrot": { "name": "carrot, diced", "pl": "carrots, diced" },
+      "sellerirot": { "name": "slice of celeriac, diced", "pl": "slices of celeriac, diced" },
+      "kalrot": { "name": "slice of swede, diced", "pl": "slices of swede, diced" },
+      "persillerot": { "name": "parsley root, diced", "pl": "parsley roots, diced" },
+      "potet": { "name": "potato, diced", "pl": "potatoes, diced" },
+      "buljong": { "name": "beef stock cube", "pl": "beef stock cubes" },
+      "salt": { "name": "salt" },
+      "pepper": { "name": "pepper" },
+      "timian": { "name": "finely chopped fresh thyme" }
+    },
+    "steps": [
+      "Cut {kjott} into cubes. Bring {vann} to the boil and add the meat.",
+      "Bring back to the boil, skim off the scum and turn down the heat. Let the meat simmer until tender, about 1 hour. Keep enough water in the pot to cover the meat and vegetables.",
+      "Add {purre}, {lok}, {gulrot}, {sellerirot}, {kalrot}, {persillerot}, {potet} and {buljong} to the pot with the meat.",
+      "Let the soup simmer for about 15 minutes, until the vegetables are tender.",
+      "Season with {salt} and {pepper}, and sprinkle over {timian} before serving."
+    ]
+  },
+  "flotegratinerte-poteter": {
+    "lang": "en",
+    "title": "Creamy potato gratin",
+    "time": "Over 60 min",
+    "ingredients": {
+      "flote": { "name": "double cream" },
+      "hvitlok": { "name": "garlic clove", "pl": "garlic cloves" },
+      "salt": { "name": "salt" },
+      "pepper": { "name": "pepper" },
+      "potet": { "name": "potatoes (approx.)" },
+      "smor": { "name": "butter" },
+      "ost": { "name": "grated white cheese" }
+    },
+    "steps": [
+      "Bring {flote} to the boil in a small saucepan. Take the pan off the heat just as the cream boils.",
+      "Finely chop {hvitlok} and add to the cream together with {salt} and {pepper}. The potatoes soak up a fair bit of salt, so season generously.",
+      "Peel {potet} and cut into thin slices.",
+      "Grease an ovenproof dish with {smor}. Layer in the potato slices and pour over the cream.",
+      "Bake in the oven at 200 °C for about 30 minutes.",
+      "Put {ost} on top and bake for another 20 minutes or so, until the cheese has melted and turned golden."
+    ]
+  },
+  "arme-riddere": {
+    "lang": "en",
+    "title": "French toast",
+    "time": "Under 20 min",
+    "ingredients": {
+      "egg": { "name": "egg", "pl": "eggs" },
+      "sukker": { "name": "sugar" },
+      "melk": { "name": "milk" },
+      "kardemomme": { "name": "ground cardamom" },
+      "kanel": { "name": "ground cinnamon" },
+      "loff": { "name": "slice of white bread or other bread", "pl": "slices of white bread or other bread" },
+      "smor": { "name": "butter for frying" }
+    },
+    "steps": [
+      "Lightly whisk {egg} with {sukker}, {melk}, {kardemomme} and {kanel}, and pour the mixture into a shallow dish.",
+      "Lay {loff} in the mixture and let it soak right through.",
+      "Lift out the bread slices and fry them in a little {smor} in a frying pan over a medium heat.",
+      "Fry the French toast on both sides until golden brown."
+    ]
+  },
+  "mac-and-cheese": {
+    "lang": "en",
+    "title": "Mac and cheese",
+    "time": "20–40 min",
+    "ingredients": {
+      "makaroni": { "name": "macaroni, preferably a large type" },
+      "smor": { "name": "butter or margarine" },
+      "hvetemel": { "name": "plain flour" },
+      "melk": { "name": "milk" },
+      "ost-saus": { "name": "grated cheese, for the sauce" },
+      "ost-topp": { "name": "grated cheese, for the topping" },
+      "sennep": { "name": "Dijon mustard" },
+      "kajenne": { "name": "cayenne pepper" },
+      "sitron": { "name": "lemon juice" }
+    },
+    "steps": [
+      "Cook {makaroni} according to the packet instructions. Drain and add a little oil so it doesn't stick together.",
+      "Melt {smor} and stir in {hvetemel}. Whisk in {melk} and bring to the boil. Let the sauce simmer for a few minutes.",
+      "Stir in {ost-saus} a little at a time, stirring well after each addition. Season with {sennep}, salt, pepper, {sitron} and {kajenne}.",
+      "Fold in the macaroni and pour everything into a small ovenproof dish. Sprinkle over {ost-topp}.",
+      "Place the dish in the middle of the oven at 225 °C and bake for about 10 minutes, or until heated through and golden."
+    ]
+  },
+"havregrot": {
+    "lang": "en",
+    "title": "Porridge",
+    "time": "Under 20 min",
+    "ingredients": {
+      "vann": { "name": "water" },
+      "lettmelk": { "name": "semi-skimmed milk" },
+      "havregryn": { "name": "quick-cook porridge oats" },
+      "salt": { "name": "salt" }
+    },
+    "steps": [
+      "Combine {vann}, {lettmelk} and {havregryn} in a saucepan and bring to the boil, stirring.",
+      "Lower the heat and let the porridge simmer for about 5 minutes, or until it is the thickness you like.",
+      "Season with {salt} if you like."
+    ]
+  },
+  "pasta-carbonara": {
+    "lang": "en",
+    "title": "Pasta carbonara",
+    "time": "Under 20 min",
+    "ingredients": {
+      "spagetti": { "name": "fresh spaghetti" },
+      "bacon": { "name": "bacon, guanciale or pancetta" },
+      "egg": { "name": "egg", "pl": "eggs" },
+      "ost": { "name": "finely grated pecorino or parmesan (approx.)" },
+      "timian": { "name": "chopped fresh thyme, or other herbs" },
+      "pepper": { "name": "coarsely ground pepper" },
+      "salt": { "name": "approx. 0.25 tbsp salt per litre of water" },
+      "eggeplomme": { "name": "egg yolk to serve (optional)", "pl": "egg yolks to serve (optional)" }
+    },
+    "steps": [
+      "Fresh {spagetti} only takes about 2 minutes to cook in lightly salted water ({salt}; 1–1.5 tbsp salt to 4 litres of water). Wait to cook it until everything else is ready. Cook dried spaghetti according to the packet instructions while you prepare the rest.",
+      "Dice {bacon} and fry in a medium-hot frying pan until golden and crisp. Add a little extra butter or oil if needed.",
+      "Whisk together {egg}, {ost}, {timian} and {pepper}.",
+      "Save some of the cooking water in a cup (about 2 dl for 4 servings) and whisk it into the egg mixture.",
+      "Lift the cooked spaghetti into the pan with the meat. Take the pan off the heat and toss in the egg mixture. Stir well. The egg mixture thickens from the heat of the spaghetti. If the spaghetti is sticky, add a little more cooking water.",
+      "Grind over black pepper and season with a little more salt if needed. Serve with {eggeplomme}."
+    ]
+  },
+  "helstekt-kylling-med-ovnsbakte-poteter": {
+    "lang": "en",
+    "title": "Whole roast chicken with oven-baked potatoes",
+    "time": "Over 60 min",
+    "ingredients": {
+      "kylling": { "name": "chicken (approx. 1.5 kg each)", "pl": "chickens (approx. 1.5 kg each)" },
+      "potet": { "name": "potatoes" },
+      "olje": { "name": "neutral oil" },
+      "salt": { "name": "salt" },
+      "pepper": { "name": "ground pepper" },
+      "paprika": { "name": "paprika" },
+      "salvie": { "name": "pot of fresh sage", "pl": "pots of fresh sage" },
+      "smor": { "name": "butter" },
+      "mynte": { "name": "fresh mint" },
+      "sennep": { "name": "Dijon mustard" },
+      "olivenolje": { "name": "extra virgin olive oil" },
+      "eddik": { "name": "white wine vinegar" },
+      "honning": { "name": "runny honey" },
+      "salt-dressing": { "name": "salt (dressing)" },
+      "salatmix": { "name": "mixed green salad leaves" },
+      "rodlok": { "name": "red onion", "pl": "red onions" },
+      "sitronsaft": { "name": "lemon juice" },
+      "agurk": { "name": "cucumber", "pl": "cucumbers" },
+      "aspargesbonner": { "name": "green beans" }
+    },
+    "steps": [
+      "Pat {kylling} dry with kitchen paper. Rub it with some of the {olje}, {salt} and {pepper}. Place it on a tray or in an ovenproof dish.",
+      "Wash {potet} well and halve them lengthways. Place them in the ovenproof dish or roasting tin around the chicken. Brush with oil and season well with salt and pepper.",
+      "Shave thin slices of cold {smor} with a cheese slicer and lay them on top of the chicken. Season with {paprika} and sage leaves from {salvie}.",
+      "Place the dish in a preheated oven at 180 °C. Insert a meat thermometer into the thickest part of the chicken breast if you like, and roast until it reads 68 °C. A 1.5 kg chicken takes about 1 hour 15 minutes. Baste the chicken with the pan juices from time to time if you like. Let the chicken rest for 10 minutes.",
+      "Pick the leaves from {mynte} and blend them in a blender or food processor with {sennep}, {olivenolje}, {eddik}, {honning} and {salt-dressing} until you have a smooth dressing.",
+      "Slice {rodlok} thinly, put it in a bowl and squeeze over {sitronsaft}. Toss until the onion is coated.",
+      "Peel {agurk} and cut into pieces. Trim the ends off {aspargesbonner} and boil them briefly in salted water.",
+      "Toss the green beans with {salatmix}, the cucumber and the dressing until evenly mixed. Then fold in the marinated onion. Serve the salad in a bowl, the chicken and potatoes on a platter, and the dressing on the side."
+    ]
+  },
+  "marry-me-chicken": {
+    "lang": "en",
+    "title": "Marry me chicken",
+    "time": "20–40 min",
+    "ingredients": {
+      "kylling": { "name": "chicken thigh fillet" },
+      "salt": { "name": "salt" },
+      "pepper": { "name": "pepper" },
+      "paprika": { "name": "paprika" },
+      "olje": { "name": "neutral oil for frying (or a mix of oil and butter)" },
+      "lok": { "name": "finely chopped onion", "pl": "finely chopped onions" },
+      "hvitlok": { "name": "clove of garlic, finely chopped or grated", "pl": "cloves of garlic, finely chopped or grated" },
+      "oregano": { "name": "dried oregano" },
+      "chili": { "name": "chilli powder" },
+      "tomatpure": { "name": "tomato purée" },
+      "soltorket": { "name": "sun-dried tomatoes in oil" },
+      "kraft": { "name": "chicken stock (made up)" },
+      "flote": { "name": "double cream" },
+      "parmesan": { "name": "parmesan or a mature Norwegian hard cheese" },
+      "spinat": { "name": "fresh spinach" },
+      "sitron": { "name": "juice and zest of lemon", "pl": "juice and zest of lemon" },
+      "basilikum": { "name": "fresh basil" }
+    },
+    "steps": [
+      "Cut {kylling} into large pieces if the pieces are big. Season well with {salt}, {pepper} and {paprika}.",
+      "Fry the chicken pieces in {olje} over medium-high heat for 1–2 minutes on each side until golden brown. Set aside.",
+      "Lower the heat, add more oil if needed, and fry {lok} until soft and glossy. Add {hvitlok}, {oregano}, {chili}, {tomatpure} and {soltorket} and let it sizzle for a minute.",
+      "Add {kraft}, bring to the boil and let it reduce a little.",
+      "Turn down the heat and stir in {flote} and {parmesan}. Simmer until the sauce thickens. Add {spinat} and let it wilt.",
+      "Return the chicken to the pan and simmer for about 5–7 minutes, until the chicken is cooked through and the sauce has thickened. Season with {sitron}, salt and pepper, and top with {basilikum}."
+    ]
+  },
+  "bananbrod": {
+    "lang": "en",
+    "title": "Banana bread",
+    "time": "40–60 min",
+    "ingredients": {
+      "banan": { "name": "ripe banana (peeled weight)" },
+      "egg": { "name": "egg", "pl": "eggs" },
+      "sukker": { "name": "soft brown sugar" },
+      "smor": { "name": "butter" },
+      "melk": { "name": "milk" },
+      "mel": { "name": "plain flour" },
+      "natron": { "name": "bicarbonate of soda" },
+      "bakepulver": { "name": "baking powder" }
+    },
+    "steps": [
+      "Peel {banan}, weigh out the amount and mash with a fork.",
+      "Whisk together {egg} and {sukker} in a bowl. Add the bananas to the bowl and mix everything together.",
+      "Melt {smor} in a small saucepan, pour in {melk}, and add the mixture to the bowl.",
+      "Measure out {mel}, {natron} and {bakepulver}. Sift the dry ingredients into the bowl and stir to a smooth batter. You can also add chocolate chips or coarsely chopped nuts.",
+      "Pour the batter into a loaf tin of about 1.5 litres lined with baking paper (or two smaller tins or small muffin cases).",
+      "Place the tin on a rack at the bottom of the oven and bake for about 45–50 minutes at 180 °C. Check with a wooden skewer: if batter clings to it, the bread needs a few more minutes.",
+      "Remove the bread from the tin and cool it on a wire rack."
+    ]
+  },
+  "eplekake": {
+    "lang": "en",
+    "title": "Apple cake",
+    "time": "Over 60 min",
+    "ingredients": {
+      "eple": { "name": "tart apple (at least)", "pl": "tart apples (at least)" },
+      "sitron": { "name": "juice of lemon", "pl": "juice of lemon" },
+      "smor": { "name": "soft butter" },
+      "sukker": { "name": "sugar" },
+      "egg": { "name": "egg", "pl": "eggs" },
+      "mel": { "name": "plain flour" },
+      "bakepulver": { "name": "baking powder" },
+      "vaniljesukker": { "name": "vanilla sugar" },
+      "kanel": { "name": "ground cinnamon" },
+      "sukker-topp": { "name": "sugar (for sprinkling)" },
+      "mandler": { "name": "almonds" }
+    },
+    "steps": [
+      "Peel {eple} if necessary (thin skin can be left on), halve, remove the cores and slice. Put the slices in a bowl and squeeze over {sitron}.",
+      "Beat {smor} and {sukker} until pale and fluffy. Add {egg} one at a time and whisk well.",
+      "Mix {mel}, {vaniljesukker} and {bakepulver}. Add a little at a time to the butter mixture on low speed.",
+      "Fill a greased springform tin (about 22 cm), lined with baking paper on the base, with the batter. Smooth the surface with a spatula.",
+      "Press the apple slices into the batter in a neat pattern. Sprinkle over {sukker-topp}, {kanel} and chopped {mandler}.",
+      "Place the cake at the bottom of the oven at 190 °C and bake for about 40 minutes. Test with a wooden skewer. Cool the cake on a wire rack."
+    ]
+  },
+  "kremet-fiskesuppe": {
+    "lang": "en",
+    "title": "Creamy fish soup",
+    "time": "20–40 min",
+    "ingredients": {
+      "buljong": { "name": "fish stock (made up)" },
+      "gulrot": { "name": "carrot, cut into pieces", "pl": "carrots, cut into pieces" },
+      "melk": { "name": "milk" },
+      "mel": { "name": "plain flour" },
+      "laks": { "name": "salmon or other oily fish" },
+      "torsk": { "name": "cod fillet or other white fish" },
+      "erter": { "name": "frozen peas" },
+      "flote": { "name": "double cream" },
+      "salt": { "name": "salt" },
+      "pepper": { "name": "pepper" },
+      "gresslok": { "name": "fresh chives" }
+    },
+    "steps": [
+      "Bring {buljong} to the boil in a saucepan and add {gulrot}. Boil for 3–4 minutes.",
+      "Mix {melk} and {mel} in a screw-top jar and shake well.",
+      "Pour the mixture into the fish stock, whisking constantly. Let the soup simmer for about 5 minutes.",
+      "Lower the heat and add {laks}, {torsk} and {erter}. Let the soup gently poach for about 5 minutes.",
+      "Stir in {flote} and season with {salt} and {pepper}. Sprinkle over finely snipped {gresslok}."
+    ]
+  },
+"how-to-cook-rice": {
+    "lang": "no",
+    "title": "Kokt hvit ris",
+    "time": "24 min",
+    "ingredients": {
+      "rice": { "name": "hvit ris (korn, middels eller langkornet), ukokt" },
+      "water": { "name": "vann" }
+    },
+    "steps": [
+      "Ikke skyll risen. Ha {water} og {rice} i en stor kasserolle på middels høy varme.",
+      "Når overflaten bobler svakt og er skummende, skru ned til lav varme og legg på lokk.",
+      "Kok i 13 minutter. Ikke rør og ikke løft på lokket. Vipp kasserollen for å sjekke at vannet er trukket inn.",
+      "Ta kasserollen av varmen, la lokket ligge på og la risen hvile i 10 minutter.",
+      "Ta av lokket, løsne risen med en risspade eller gaffel, og server."
+    ]
+  },
+  "beef-stew-with-carrots-potatoes": {
+    "lang": "no",
+    "title": "Oksegryte",
+    "time": "4 timer",
+    "ingredients": {
+      "beef": { "name": "oksekjøtt uten ben (bog eller høyrygg med god marmorering), skåret i 4 cm biter" },
+      "salt": { "name": "salt" },
+      "pepper": { "name": "nykvernet svart pepper" },
+      "oil": { "name": "olivenolje" },
+      "onion": { "name": "mellomstor gul løk, skåret i 2,5 cm biter", "pl": "mellomstore gule løk, skåret i 2,5 cm biter" },
+      "garlic": { "name": "fedd hvitløk, skrellet og knust", "pl": "fedd hvitløk, skrellet og knust" },
+      "balsamic": { "name": "balsamicoeddik" },
+      "tomato-paste": { "name": "tomatpuré" },
+      "flour": { "name": "hvetemel" },
+      "wine": { "name": "tørr rødvin" },
+      "broth": { "name": "oksebuljong" },
+      "water": { "name": "vann" },
+      "bay": { "name": "laurbærblad", "pl": "laurbærblad" },
+      "thyme": { "name": "tørket timian" },
+      "sugar": { "name": "sukker" },
+      "carrot": { "name": "stor gulrot, skrellet og skåret i 2,5 cm biter på skrå", "pl": "store gulrøtter, skrellet og skåret i 2,5 cm biter på skrå" },
+      "potato": { "name": "små kokefaste poteter (nypoteter), delt i to" },
+      "parsley": { "name": "frisk hakket persille, til servering (valgfritt)" }
+    },
+    "steps": [
+      "Forvarm ovnen til 165 °C med en rist i nedre midtre posisjon.",
+      "Tørk {beef} med kjøkkenpapir og krydre med {salt} og {pepper}. Varm 1 ss av {oil|q} i en stor støpejernsgryte på middels høy varme.",
+      "Brun kjøttet i 3 omganger, ca. 5 minutter hver, og ha i 1 ss olje før hver nye omgang. Ikke fyll gryta for full. Legg det brunede kjøttet over på en tallerken.",
+      "Ha i {onion}, {garlic} og {balsamic}. Kok i ca. 5 minutter og skrap løs det brunede fra bunnen. Rør inn {tomato-paste} og kok i 1 minutt til.",
+      "Ha kjøttet og kjøttsaften tilbake i gryta. Dryss over {flour} og rør i 1 til 2 minutter til melet har løst seg opp.",
+      "Ha i {wine}, {broth}, {water}, {bay}, {thyme} og {sugar}. Rør for å løsne det brunede fra bunnen og kok opp. Legg på lokk og la det småkoke i ovnen i 2 timer.",
+      "Ha i {carrot} og {potato}. Legg på lokk og sett tilbake i ovnen i ca. 1 time til, til grønnsakene er møre, buljongen har tyknet og kjøttet er mørt.",
+      "Ta ut laurbærbladene og smak til med salt og pepper. Server varm, pyntet med {parsley}."
+    ]
+  },
+  "1000-calorie-smoothie": {
+    "lang": "no",
+    "title": "Smoothie på 1000 kalorier med myseprotein",
+    "ingredients": {
+      "strawberries": { "name": "frosne jordbær" },
+      "peanut-butter": { "name": "peanøttsmør" },
+      "banana": { "name": "mellomstor banan", "pl": "mellomstore bananer" },
+      "honey": { "name": "honning" },
+      "oats": { "name": "havregryn" },
+      "whey": { "name": "myseproteinpulver" },
+      "milk": { "name": "helmelk" }
+    },
+    "steps": [
+      "Ha {strawberries}, {peanut-butter}, {banana}, {honey}, {oats}, {whey} og {milk} i kannen på en kraftig blender, i den rekkefølgen.",
+      "Blend til smoothien er jevn og uten klumper."
+    ]
+  }
+};

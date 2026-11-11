@@ -1,6 +1,6 @@
 /* Offline support. Raise VERSION whenever any app file or recipe changes,
    so phones fetch the new files. */
-const VERSION = 'recipes-v2';
+const VERSION = 'recipes-v3';
 const FILES = ['./', 'index.html', 'styles.css', 'app.js', 'recipes.js', 'categories.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 
